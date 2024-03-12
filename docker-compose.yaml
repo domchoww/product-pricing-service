@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  product-pricing-service:
+    image: domchowit/pricing:latest
+    container_name: product-pricing-service
+    ports:
+      - "8080:8080"

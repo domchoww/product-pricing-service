@@ -1,0 +1,60 @@
+### get active campaign
+GET http://localhost:8080/campaign
+
+### create campaign
+POST http://localhost:8080/campaign
+Content-Type: application/json
+
+{
+  "promotionRanges": [
+    {
+      "countFrom": 0,
+      "countTo": 5,
+      "discountPercentage": "2"
+    },
+    {
+      "countFrom": 6,
+      "countTo": 10,
+      "discountPercentage": "30"
+    }
+  ]
+}
+
+### create percentage based campaign
+POST http://localhost:8080/campaign
+Content-Type: application/json
+
+{
+  "promotionRanges": [
+    {
+      "discountPercentage": "10"
+    }
+  ]
+}
+
+### delte active campagin
+DELETE http://localhost:8080/campaign
+
+### get products
+GET http://localhost:8080/products
+
+### collect prodcuts
+POST http://localhost:8080/products/collect
+Content-Type: application/json
+
+{
+  "productAllocations": [
+    {
+      "productId": "00000000-0000-0000-0000-000000000001",
+      "count": 100
+    },
+    {
+      "productId": "00000000-0000-0000-0000-000000000002",
+      "count": 1
+    },
+    {
+      "productId": "00000000-0000-0000-0000-000000000003",
+      "count": 7
+    }
+  ]
+}
